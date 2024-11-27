@@ -5,50 +5,24 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
+
+  List names = ["Jimi", "Jack", "Clark", "Steve"];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          // backgroundColor: Colors.white38,
-          // appBar: AppBar(
-          //   title: Text("My App Bar"),
-          //   backgroundColor: Colors.white,
-          //   elevation: 0,
-          //   leading: Icon(Icons.menu),
-          //   actions: [IconButton(
-          //     onPressed: () {},
-          //     icon: Icon(Icons.logout),
-          //   )
-          //   ],
-          // ),
-            body: ListView(
-              scrollDirection: Axis.horizontal,
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // 1st box
-                Container(
-                  width: 200,
-                  color: Colors.deepPurple,
-                ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context,index) => ListTile(
+            title: Text(names[index]),
+          )
+        ),
+      ),
 
-                // 2nd box
-                Container(
-                  width: 200,
-                  color: Colors.deepPurple[200],
-                ),
 
-                // 3rd box
-                Container(
-                  width: 200,
-                  color: Colors.deepPurple[400],
-                ),
-              ],
-            )
-
-        )
     );
   }
 }
