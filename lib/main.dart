@@ -9,6 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
    MyApp({super.key});
 
+   // P R O G R A M M I N G   F U N D A M E N T I A L S
+
   //VARIABLES: You can store different types of into variables
   String name = "Anwar Azimov";
   int age = 23;
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
   2 * 2 -> MULTIPLY
   4 / 2 -> 2, DIVIDE
   11 % 2 -> 1, REMAINDER
+  5++ -> 6, INCREMENT
+  5-- -> 4, DECREMENT
 
 
   COMPARISON OPERATORS:
@@ -32,6 +36,7 @@ class MyApp extends StatelessWidget {
   3 > 2 -> FALSE, LESS THAN
   5 >= 5 -> TRUE, GREATER OR EQUAL TO
   6 <= 7 TRUE, LESS OR EQUAL TO
+
 
   LOGICAL OPERATORS:
   AND operator, returns true if both sides are ture
@@ -43,13 +48,111 @@ class MyApp extends StatelessWidget {
   NOT operator, returns the opposite value
   !inBeginner -> return false
 
+  ------------------------------------------------------------------------------
+
+  C O N T R O L F L O W
+
+  if (condition) {
+   do something
+   }
+
+   if (condition) {
+     do something
+   }else{
+     do something else
+   }
+
+   if () {
+
+   }else if(another condition) {
+
+   }
+
+   switch(expression){
+      case value:
+
+      break;
+
+      default;
+   }
+
+   for (initialization; condition; iteration){
+
+   }
+
+   while (condition){
+
+   }
+
+   break -> break out of loop
+   continue -> skip this current iteration
+
+--------------------------------------------------------------------------------
+
+  F U N C T I O N S / M E T H O D
+
+  We just looked at some cool blocks of code that gets things done!
+  We can organise these blocks of code into functions so that we can reuse
+  them easily.
+
+
+
 
 
    */
 
+   //greet function
+   void greet(){
+     print("Hello, Anwar!");
+   }
+
+   //function with parameters
+   void greetPerson(String name, int age){
+     print("Hello " + name + "!!!");
+   }
+
+   //function with return type
+   int add(int a, int b){
+     int sum = a + b;
+     return sum;
+   }
+
+
+   /*
+
+   ----------------------------------------------------------------------------
+
+   D A T A S T R U C T O R S
+
+    */
+
+   // LIST: ordered collections of elements, can have duplicates.
+   List<int> nums = [1, 2, 3];
+
+   List<String> names = ["Anna", "John", "Deph"];
+
+  // SET: underordered collection of unique elements
+   Set<String> uniqueNames = {"Sam", "Vince", "Sharon"};
+
+   //MAP: stored as key-value pairs
+   Map user = {
+     'name' : "Abror Azimov",
+     'age' : 18,
+     'country' : "England"
+   };
+
+
+
+
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+     greetPerson("Anwarjon", 22);
+
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
